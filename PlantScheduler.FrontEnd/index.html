@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>My Pretty PLants</title>
+    <script src="plants.js"></script>
+</head>
+<body>
+    
+    <ul id="plant-list"></ul>
+
+<form id="plant-form">
+    <input type="text" id="plant-name" placeholder="Plant Name" required />
+    <input type="text" id="plant-species" placeholder="Plant Species" required />
+    <input type="date" id="watering-interval" placeholder="Watering Interval (days)" required />
+    <button onclick="createPlant()">Add Plant</button>
+</form>
+
+<button onclick="getPlants()">Load Plants</button>
+
+</body>
+</html>
