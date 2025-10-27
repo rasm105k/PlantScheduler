@@ -35,7 +35,7 @@ async function createPlant()
         lastWatered: lastWatered
     };
 
-    await fetch('http://localhost:5015/api/plant/createPlant',
+    await fetch('http://localhost:5015/api/plant/create',
     {
         method: 'POST',
         headers: {
