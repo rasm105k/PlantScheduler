@@ -3,9 +3,12 @@ window.onload = async () =>
     await getPlants();
 }
 
+const netApi = 'http://localhost:5015/api/plant'
+const nodeApi = 'http://localhost:5000/api/plant'
+
 async function getPlants()  
 {
-    const res = await fetch('http://localhost:5015/api/plant/getAll');
+    const res = await fetch(`${netApi}/getAll`);
     
     if (!res.ok) 
         throw new Error(res.statusText);
@@ -35,7 +38,7 @@ async function createPlant()
         lastWatered: lastWatered
     };
 
-    await fetch('http://localhost:5015/api/plant/create',
+    await fetch(`${netApi}/create`,
     {
         method: 'POST',
         headers: {
